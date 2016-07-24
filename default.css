@@ -1,23 +1,33 @@
 @charset "utf-8";
 
 body{
-  background-color: #FFFF99;
+  background-color: #FF6666;
 }
 
 #main{
-  width: 950px; /* 960-2*(80[padding]+1[border])  */
+  width: 798px; /* 960-2*(80[padding]+1[border])  */
   margin: 40px auto;
   padding: 40px 80px;
-  border: green 1px solid;
-  background-color: MistyRose;
+  border: yellow 1px solid;
+  background-color: white;
 }
+/* --- 見出し --- */
+h3.heading {
+width: 570px; /* 見出しの幅 */
+margin: 0 0 1em; /* 見出しのマージン（上、左右、下） */
+padding: 20px 15px; /* 見出しのパディング（上下、左右） */
+background: #c6e6ef url(heading_back4_1.gif) repeat-x top; /* 見出しの背景 */
+font-size: 120%; /* 見出しの文字サイズ */
+line-height: 100%;
+}
+
 
 .photo{
   float: left;
   margin-right: 30px;
 }
 
-.kimuti_picture:after{
+.moyasi_picture:after{
   content: "";
   clear: both;
   display: block;
@@ -25,7 +35,7 @@ body{
 
 .explanation{
   float: left;
-  width: 600px;
+  width: 468px;
 }
 
 dt{
@@ -34,60 +44,101 @@ dt{
   font-weight: bold;
 }
 
-.btn {
-  -webkit-appearance: none;
-  -webkit-border-radius: 0;
-  margin: 5px;
-  width: 100px;
-  height: 40px;
-  padding: 10px;
-  border: none;
-  font-size: 16px;
-}
-
 #ingredient{
   border: 2px solid lightcoral;
   border-collapse: collapse;
 }
 
 th{
-  border: 1px solid lightcoral;  /* 枠線 */
-  background-color: mistyrose;   /* 背景色 */
-  padding: 5px;                  /* 枠内の余白 */
-  width: 100px;                  /* 幅 */
-  text-align: center;           /* 中央寄せ */
+  border: 1px solid lightcoral;  
+  background-color: mistyrose;   
+  padding: 5px;                  
+  width: 100px;                  
+  text-align: center;           
 }
 
 td{
-  border: 1px solid lightcoral;  /* 枠線 */
-  padding: 5px;                  /* 枠内の余白 */
-  width: 80px;                   /* 幅 */
-  text-align: right;             /* 右寄せ */
+  border: 1px solid lightcoral;  
+  padding: 5px;                  
+  width: 80px;                  
+  text-align: right;            
 }
 
 caption{
-  padding: 5px;                  /* 余白 */
+  padding: 5px;              
 }
 
 #price{
-  background-color: lightyellow;  /* 背景色 */
+  background-color: lightyellow;  
 }
 
 thead th, tfoot th{
-  background-color: white;        /* 背景色 */
+  background-color: white;        
 }
 
 thead td{
-  color: white;                   /* 文字色 */
-  background-color: lightcoral;   /* 背景色 */
-  text-align: center;             /* 中央寄せ */
+  color: white;                   
+  background-color: lightcoral;   
+  text-align: center;            
 }
 
 tfoot td{
-  font-weight: bold;              /* 字の太さ */
-  background-color: white;        /* 背景色 */
+  font-weight: bold;             
+  background-color: white;       
+}
+#gnav a {
+  display: block;
+  text-align: center; /* 中央揃え */
+  text-decoration: none;/* 下線を消す */
+  color: white;
+}
+#gnav a:after {
+    clear: both;
+}
+#gnav div.img {
+  display: table-cell;
+  vertical-align: middle;
+  background: url(../img/css_sprite.png) no-repeat;
+  width: 55px;
+  height: 46px;
+}
+#gnav div.text {
+  display: table-cell;
+  vertical-align: middle;
+  padding:10px 5px; /* 上下に空間を確保する  */
+}
+div.img#home{    background-position: 0 0px;}
+div.img#content1 {background-position: 0 -46px;}
+div.img#content2{background-position: 0 -92px;}
+div.img#help{    background-position: 0 -148px;}
+div.img#faq{     background-position: 0 -184px;}
+
+#gnav a:hover {
+  background: lightgreen;
+  color: black;
 }
 
+#gnav a.selected {
+  background: white;
+  color: darkgreen;
+  font-weight: bold; /* 太字にしてみる */
+}
+
+#gnav ul {
+  overflow: hidden;
+}
+
+
+#gnav li {
+  float: left;/* 固定幅にするためにfloatで指定 */
+  width: 156px;
+  border-right: white 1px solid;/* 右に線を引く */
+  list-style-type: none;/* 点を消す */
+}
+
+#gnav li:first-child {
+  border-left: white 1px solid;/* 左にも線を引く */
+}
 form {
     /* フォームをページの中央に置く */
     margin: 0 auto;
@@ -143,4 +194,48 @@ button {
        おおよそ同じスペースを表す */
     margin-left: .5em;
 }
+
+/* --- ランキングエリア --- */
+div.ranking {
+width: 300px; /* ランキングエリアの幅 */
+font-size: 80%;
+}
+
+/* --- 見出し --- */
+div.ranking h3 {
+margin: 0 0 10px; /* 見出しのマージン（上、左右、下） */
+padding: 5px 10px; /* 見出しのパディング（上下、左右） */
+background-color: #f0f0f0;
+font-size: 100%;
+}
+
+/* --- ランキングリスト --- */
+div.ranking ol {
+margin: 0;
+padding: 0 0 5px; /* ランキングリストのパディング（上、左右、下） */
+border-top: 1px #c0c0c0 dotted; /* ランキングリストの上境界線 */
+list-style-type: none;
+}
+
+/* --- リスト項目 --- */
+div.ranking li {
+padding: 9px 0 9px 48px; /* 項目のパディング（上右下左） */
+background-repeat: no-repeat;
+background-position: 3px 4px; /* 背景画像の表示位置（左からの距離、上からの距離） */
+border-bottom: 1px #c0c0c0 dotted; /* 項目の下境界線 */
+line-height: 120%;
+}
+
+/* --- マーカー画像 --- */
+div.ranking li.rank1 {
+background-image: url(rank_1.gif); /* 1位の項目 */
+}
+div.ranking li.rank2 {
+background-image: url(rank_2.gif); /* 2位の項目 */
+}
+div.ranking li.rank3 {
+background-image: url(rank_3.gif); /* 3位の項目 */
+}
+
+
 
