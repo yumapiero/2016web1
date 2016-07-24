@@ -1,4 +1,4 @@
-var thmubs = document.querySelectorAll('.thumb');
+var thmubs = document.querySelectorAll('.hadasama');
 for(idx in thmubs){
     thmubs[idx].onclick = function(){
         document.getElementById("bigimg").src = '' + this.dataset.image + '.PNG';
