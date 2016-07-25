@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+.box-drop_shadow{
+  box-shadow:  2px  2px  5px gray;           padding:  5px;  margin:20px;
+}
+
 body{
   background-color: #C644FC;
 }
